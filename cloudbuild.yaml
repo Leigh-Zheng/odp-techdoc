@@ -1,6 +1,6 @@
 substitutions:
   _HUGO_VERSION: "0.79.1"
-  _MIRROR_CLOUD_REPO: "github_mrraz_techdoc"
+  _MIRROR_CLOUD_REPO: "github_manojchalise_techdoc"
 
 images: 
   - 'gcr.io/$PROJECT_ID/hugo-${_HUGO_VERSION}:latest'

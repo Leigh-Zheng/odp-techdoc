@@ -5,15 +5,27 @@ This repo is for hosting technical documentation static pages in GCP appengine. 
 
 Follow steps below to duplicate this implementation to host your own static webpage. 
 
-1. Fork this repo
+1. Fork this repo in [github] (https://github.com/GSA)
 2. Request or create GCP project:
 
-     You will atleast need editor or owner level permission to be able to enable API or support to enable API and required permission for different service account.  
-2. Bootstrap GCP project
+     You will atleast need editor or owner level permission to be able to enable API or support to enable API and required permission for different service account. 
+
+2. Bootstrap GCP project:
 
      Bootstrap GCP project. Enable APP engine API, enable cloud build API, Enable IAP, create oauth concent, enable cloud storage. 
 
-3. Build trigger and link to your repo
+3. Sync your repo with [google cloud source repository](https://source.cloud.google.com/)
+
+            This is extra step needed due to existing issue with cloud build not being able to download and sync git sub-modules used by docsy these. Update below valiable in cloudbuild.yaml file to match your mirred repo name
+
+              _MIRROR_CLOUD_REPO: "github_USERNAME_techdoc"
+
+4. Build trigger and link to your repo
+
+Build google cloud build trigger which will use cloudbuild.yaml file to trigger build when code in committed in your brach of choice. 
+
+    
+
 4. Sync your repo to cloud repo
 5. Update cloudbuild.yaml file
 6. Update config.toml file
