@@ -7,8 +7,10 @@ Follow steps below to duplicate this implementation to host your own static webp
 
 1. Fork this repo
 2. Request or create GCP project:
+
      You will atleast need editor or owner level permission to be able to enable API or support to enable API and required permission for different service account.  
 2. Bootstrap GCP project
+
      Bootstrap GCP project. Enable APP engine API, enable cloud build API, Enable IAP, create oauth concent, enable cloud storage. 
 
 3. Build trigger and link to your repo
