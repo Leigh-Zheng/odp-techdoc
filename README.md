@@ -1,5 +1,5 @@
 
-# TechDoc on GCP
+# TechDoc on GCP (Demo only)
 
 This repo is for hosting technical documentation static pages in GCP appengine. This implementation uses GCP app engine for hosting static pages, GCP IAP proxy for authentication, GCP cloud build ci/cd, Github for storing code and static page content, huho with docsy theme to build static pages. This is based on hugo docsy theme similar to [kubernates.io](https://kubernetes.io/).
 
@@ -22,24 +22,32 @@ Follow steps below to duplicate this implementation to host your own static webp
 
 4. Build trigger and link to your repo
 
-Build google cloud build trigger which will use cloudbuild.yaml file to trigger build when code in committed in your brach of choice. 
+Build google cloud build trigger which will use cloudbuild.yaml file to trigger build when code in committed in your brach of choice. Ensure that cloud build service account "PROJECT_NUMBER]@cloudbuild.gserviceaccount.com " have a "App Engine Deployer",  "Service Account User" &  "App Engine Service Admin role". Please co role permission from IAM. 
 
-    
+5. Configure Identity Aware proxy to enforce authentication for GSA internal users or users from specific groups
 
-4. Sync your repo to cloud repo
-5. Update cloudbuild.yaml file
-6. Update config.toml file
-7. Update your homepage
-8. Start editing your documentation
-9. configure IAP
-10. create cname record for your apppengine url
-10. Keep updating doc
+6. Create app engine firewall rules (as needed)
 
+7. Update config.toml file
+
+8. Update your homepage and documents
+
+9. Verify custum domain names, create cname record for your apppengine url to use your own domain url like example.com
 
 
+To Do
+
+Clean up
+Better doc
+cloud schedular to trigger rebuild every week even without any change in master repo, to get updated images for app engine
+use alphine image for hugo (update hugo docker file)
 
 
 
+
+
+
+Reference 
 
 # Docsy Example
 
@@ -49,96 +57,4 @@ This Docsy Example Project is hosted at [https://example.docsy.dev/](https://exa
 
 You can find detailed theme instructions in the Docsy user guide: https://docsy.dev/docs/
 
-This is not an officially supported Google product. This project is currently maintained.
-
-## Cloning the Docsy Example Project
-
-The following will give you a project that is set up and ready to use (don't forget to use `--recurse-submodules` or you won't pull down some of the code you need to generate a working site). The `hugo server` command builds and serves the site. If you just want to build the site, run `hugo` instead.
-
-```bash
-git clone --recurse-submodules --depth 1 https://github.com/google/docsy-example.git
-cd docsy-example
-hugo server
-```
-
-The theme is included as a Git submodule:
-
-```bash
-▶ git submodule
- a053131a4ebf6a59e4e8834a42368e248d98c01d themes/docsy (heads/master)
-```
-
-If you want to do SCSS edits and want to publish these, you need to install `PostCSS` (not needed for `hugo server`):
-
-```bash
-npm install
-```
-
-<!--### Cloning the Example from the Theme Project
-
-
-```bash
-git clone --recurse-submodules --depth 1 https://github.com/docsy.git
-cd tech-doc-hugo-theme/exampleSite
-HUGO_THEMESDIR="../.." hugo server
-```
-
-
-Note that the Hugo Theme Site requires the `exampleSite` to live in a subfolder of the theme itself. To avoid recursive duplication, the example site is added as a Git subtree:
-
-```bash
-git subtree add --prefix exampleSite https://github.com/google/docsy.git  master --squash
-```
-
-To pull in changes, see `pull-deps.sh` script in the theme.-->
-
-## Running the website locally
-
-Once you've cloned the site repo, from the repo root folder, run:
-
-```
-hugo server
-```
-
-### Running a container locally
-
-You can run docsy-example inside a [Docker](ihttps://docs.docker.com/)
-container, the container runs with a volume bound to the `docsy-example`
-folder. This approach doesn't require you to install any dependencies other
-than Docker.
-
-1. Build the docker image 
-
-```bash
-docker build -f dev.Dockerfile -t docsy-example-dev:latest .
-```
-
-1. Run the built image
-
-```bash
-docker run --publish 1313:1313 --detach --mount src="$(pwd)",target=/home/docsy/app,type=bind docsy-example-dev:latest
-```
-
-Open your web browser and type `http://localhost:1313` in your navigation bar,
-This opens a local instance of the docsy-example homepage. You can now make
-changes to the docsy example and those changes will immediately show up in your
-browser after you save.
-
-To stop the container, first identify the container ID with:
-
-```bash
-docker container ls
-```
-
-Take note of the hexadecimal string below the `CONTAINER ID` column, then stop
-the container:
-
-```bash
-docker stop [container_id]
-```
-
-To delete the container run:
-
-```
-docker container rm [container_id]
-```
+This is not an officially supported Google product. 
