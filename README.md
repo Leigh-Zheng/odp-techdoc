@@ -22,7 +22,7 @@ Follow steps below to duplicate this implementation to host your own static webp
 
 4. Build trigger and link to your repo
 
-Build google cloud build trigger which will use cloudbuild.yaml file to trigger build when code in committed in your brach of choice. 
+Build google cloud build trigger which will use cloudbuild.yaml file to trigger build when code in committed in your brach of choice. Ensure that cloud build service account "PROJECT_NUMBER]@cloudbuild.gserviceaccount.com " have a "App Engine Deployer" role permission from IAM. 
 
     
 
