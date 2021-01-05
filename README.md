@@ -1,7 +1,7 @@
 
 # TechDoc on GCP (Demo only)
 
-This repo is for hosting technical documentation static pages in GCP appengine. This implementation uses GCP app engine for hosting static pages, GCP IAP proxy for authentication, GCP cloud build ci/cd, Github for storing code and static page content, huho with docsy theme to build static pages. This is based on hugo docsy theme similar to [kubernates.io](https://kubernetes.io/).
+This repo is for hosting technical documentation static pages in GCP App Engine. This implementation uses GCP App Engine for hosting static pages, GCP IAP proxy for authentication, GCP cloud build ci/cd, Github for storing code and static page content, [HUGO](https://gohugo.io/) with [docsy](https://themes.gohugo.io/docsy/) theme to build static pages. This implementation is similar to [kubernates.io](https://kubernetes.io/) site. 
 
 Follow steps below to duplicate this implementation to host your own static webpage. 
 
