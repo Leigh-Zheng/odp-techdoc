@@ -1,10 +1,10 @@
 ---
-title: "Launching Ponycopters"
-linkTitle: "Launching Ponycopters"
+title: "Markup cheatsheet"
+linkTitle: "Markup cheatsheet"
 date: 2017-01-05
 weight: 3
 description: >
-  A short lead description about this content page. It can be **bold** or _italic_ and can be split over multiple paragraphs.
+  Markup cheatsheet about this content page. It can be **bold** or _italic_ and can be split over multiple paragraphs.
 ---
 
 {{% pageinfo %}}

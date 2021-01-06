@@ -1,7 +1,7 @@
 
 ---
 linkTitle: "GCP Faq"
-weight: 2
+weight: 3
 date: 2017-01-05
 ---
 

@@ -1,7 +1,7 @@
 ---
 linkTitle: "Mfa Faq"
 date: 2017-01-05
-weight: 3
+weight: 1
 ---
 
 #### **What will need to have MFA authentication?** 
