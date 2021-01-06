@@ -17,7 +17,7 @@ Follow steps below to duplicate this implementation to host your own static webp
 
 4. Sync your repo with [google cloud source repository](https://source.cloud.google.com/)
 
-     This is extra step needed due to existing issue with cloud build not being able to download and sync git sub-modules used by docsy these. Update below valiable in cloudbuild.yaml file to match your mirred repo name
+     This is extra step needed due to existing issue with cloud build not being able to download and sync git sub-modules used by docsy theme. Update below valiable in cloudbuild.yaml file to match your mirred repo name
 
      _MIRROR_CLOUD_REPO: "github_USERNAME_techdoc"
 
