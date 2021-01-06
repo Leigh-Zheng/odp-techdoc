@@ -1,6 +1,6 @@
 
 ---
-title: "ISE-ODP1 Introduction"
+title: "ISE-ODP Introduction"
 linkTitle: "Introduction"
 date: 2017-01-05
 description: >
