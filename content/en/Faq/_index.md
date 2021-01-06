@@ -2,6 +2,7 @@
 ---
 title: "Faq"
 linkTitle: "Faq"
+template : docs
 weight: 3
 date: 2017-01-05
 description: >
