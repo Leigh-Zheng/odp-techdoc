@@ -5,9 +5,7 @@ weight: 3
 ---
 
 
-#### **FAQ:MultiFactor Authentication**
-
-> **What will need to have MFA authentication?** 
+> ##### **What will need to have MFA authentication?** 
 
 MFA is requirement for ALL authentication point in the system. This generally includes:
 
