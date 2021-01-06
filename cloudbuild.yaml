@@ -1,6 +1,6 @@
 substitutions:
   _HUGO_VERSION: "0.79.1"
-  _MIRROR_CLOUD_REPO: "github_manojchalise_techdoc"
+#  _MIRROR_CLOUD_REPO: "github_manojchalise_techdoc"
 
 images: 
   - 'gcr.io/$PROJECT_ID/hugo-${_HUGO_VERSION}:latest'
@@ -11,6 +11,8 @@ images:
 steps:
 
 # this step is needed due to issue with cloud build not downloading git submodule documented in (https://stackoverflow.com/questions/59180893/google-cloud-build-cant-update-submodules) 
+#git config -f .git/config submodule.${_MIRROR_CLOUD_REPO}.url https://source.cloud.google.com/$PROJECT_ID/${_MIRROR_CLOUD_REPO} 
+#git config -f .gitmodules submodule.${_MIRROR_CLOUD_REPO}.url https://source.cloud.google.com/$PROJECT_ID/${_MIRROR_CLOUD_REPO}
 
 - id: 'download git submodule'
   name: 'gcr.io/cloud-builders/git'
@@ -18,8 +20,6 @@ steps:
   args:
     - '-c'
     - |
-      git config -f .git/config submodule.${_MIRROR_CLOUD_REPO}.url https://source.cloud.google.com/$PROJECT_ID/${_MIRROR_CLOUD_REPO} 
-      git config -f .gitmodules submodule.${_MIRROR_CLOUD_REPO}.url https://source.cloud.google.com/$PROJECT_ID/${_MIRROR_CLOUD_REPO}
       git submodule init
       git submodule update --init --recursive
 
