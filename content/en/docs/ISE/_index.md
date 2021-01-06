@@ -7,7 +7,6 @@ date: 2017-01-05
 
 #### **ISE Introduction**
 
-
 With more teams at the General Services Administration (GSA) leveraging Development and Operations (DevOps) practices, ensuring effective security practices has become paramount. The ODP aims to ensure that GSA teams who practice DevOps, adopt a security forward thinking.
 
 **Program Goals:**
