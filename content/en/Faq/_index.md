@@ -3,6 +3,9 @@
 title: "Faq"
 linkTitle: "Faq"
 weight: 100
+menu:
+  main:
+    weight: 100
 date: 2017-01-05
 description: >
   See your project in action!
