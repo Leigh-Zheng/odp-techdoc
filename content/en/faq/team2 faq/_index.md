@@ -1,7 +1,7 @@
 
 ---
-title: "Faq"
-linkTitle: "Faq"
+title: "Faq Team2"
+linkTitle: "Faq Team 2"
 weight: 102
 template : docs
 content type : docs
