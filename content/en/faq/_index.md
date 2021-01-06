@@ -1,11 +1,10 @@
 
 ---
-title: "Faq"
-linkTitle: "Faq"
-weight: 100
+title: "FAQ"
+linkTitle: "FAQ"
 menu:
   main:
-    weight: 100
+    weight: 30
 date: 2017-01-05
 ---
 
