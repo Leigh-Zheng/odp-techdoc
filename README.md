@@ -5,7 +5,7 @@ This repo is for hosting technical documentation static pages in GCP App Engine.
 
 Follow steps below to duplicate this implementation to host your own static webpage. 
 
-1. Fork this repo in [github] (https://github.com)
+1. Fork this repo in [github] (https://github.com/GSA/odp-techdoc)
 
 2. Request or create GCP project:
 
