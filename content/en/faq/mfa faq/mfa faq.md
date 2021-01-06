@@ -1,5 +1,5 @@
 ---
-linkTitle: "Mfa Faq"
+linkTitle: "MFA Faq"
 date: 2017-01-05
 weight: 1
 ---
