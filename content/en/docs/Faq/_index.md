@@ -1,7 +1,7 @@
 
 ---
-title: "Examples"
-linkTitle: "Examples"
+title: "Faq"
+linkTitle: "Faq"
 weight: 3
 date: 2017-01-05
 description: >
