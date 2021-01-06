@@ -5,9 +5,6 @@ linkTitle: "Faq Team 2"
 weight: 102
 template : docs
 content type : docs
-menu:
-  main:
-    weight: 100
 date: 2017-01-05
 description: >
   See your project in action!
