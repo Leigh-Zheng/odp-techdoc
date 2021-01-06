@@ -3,6 +3,8 @@
 title: "Faq"
 linkTitle: "Faq"
 weight: 100
+template : docs
+content type : docs
 menu:
   main:
     weight: 100
