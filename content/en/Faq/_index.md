@@ -2,8 +2,7 @@
 ---
 title: "Faq"
 linkTitle: "Faq"
-template : docs
-weight: 3
+weight: 100
 date: 2017-01-05
 description: >
   See your project in action!
