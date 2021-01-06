@@ -1,6 +1,5 @@
 
 ---
-title: "ISE-ODP"
 linkTitle: "Introduction"
 date: 2017-01-05
 ---
